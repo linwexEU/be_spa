@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "326a0cdd-a7b1-40ad-8311-dfcab52f3198",
+		"name": "SCA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38798367"
+	},
+	"item": [
+		{
+			"name": "Get all spy cats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/spy-cats/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"spy-cats",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a spy cat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Lexa4\",\n  \"years_of_experience\": 4,\n  \"breed\": \"Australian Mist\",\n  \"salary\": 500.50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/spy-cats/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"spy-cats",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a spy cat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/spy-cats/7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"spy-cats",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Spy Cat's salary",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"salary\": 999.99\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/spy-cats/7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"spy-cats",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a spy cat",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"salary\": 999.99\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/spy-cats/7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"spy-cats",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all missions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/missions/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"missions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a mission",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/missions/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"missions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a mission",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"target\": {\n    \"name\": \"testName\",\n    \"country\": \"testCountry\",\n    \"notes\": \"testNotes\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/missions/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"missions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a mission",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"target\": {\n    \"notes\": \"testNotes222\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/missions/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"missions",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign a mission to a Spy Cat",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/missions/3/spy-cats/10/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"missions",
+						"3",
+						"spy-cats",
+						"10",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a mission",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/missions/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"missions",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

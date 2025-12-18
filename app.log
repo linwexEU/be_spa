@@ -1,0 +1,8 @@
+2025-12-18 15:23:36 | ERROR | root:wrapper:15 - Args: (<src.api.services.spy_cat.SpyCatService object at 0x7a7fc9c83610>, CreateSpyCatRequest(name='Lexa', years_of_experience=4, breed='Australian Mist', salary=500.5)), Kwargs: {}, Error: Spy Cat with name=Lexa already exists
+2025-12-18 15:25:20 | ERROR | root:wrapper:15 - Args: (<src.api.services.spy_cat.SpyCatService object at 0x777034316270>, 1), Kwargs: {}, Error: Spy cat with id=1 not found
+2025-12-18 15:26:58 | ERROR | root:wrapper:15 - Args: (<src.api.services.spy_cat.SpyCatService object at 0x7770341f2b10>, 7), Kwargs: {}, Error: (sqlalchemy.dialects.postgresql.asyncpg.IntegrityError) <class 'asyncpg.exceptions.ForeignKeyViolationError'>: update or delete on table "spy_cat" violates foreign key constraint "mission_spy_cat_fkey" on table "mission"
+DETAIL:  Key (id)=(7) is still referenced from table "mission".
+[SQL: DELETE FROM spy_cat WHERE spy_cat.id = $1::INTEGER RETURNING spy_cat.id]
+[parameters: (7,)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-12-18 15:35:48 | ERROR | root:wrapper:15 - Args: (<src.api.services.mission.MissionService object at 0x71079a476150>, 3), Kwargs: {}, Error: Mission with id=3 assigned and can't be deleted
