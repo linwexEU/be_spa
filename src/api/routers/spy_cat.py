@@ -21,6 +21,7 @@ async def select_one_spy_cat(spy_cat_id: int, spy_cat_service: SpyCatServiceDep)
 async def create_spy_cat(payload: CreateSpyCatRequest, spy_cat_service: SpyCatServiceDep) -> CreateSpyCatResponse: 
     return await spy_cat_service.create_spy_cat(payload)
 
+
 @router.put("/{spy_cat_id}")
 async def update_spy_cat(spy_cat_id: int, payload: UpdateSpyCatRequest, spy_cat_service: SpyCatServiceDep) -> UpdateSpyCatResponse: 
     return await spy_cat_service.update_spy_cat(spy_cat_id, payload)
