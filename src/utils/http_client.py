@@ -1,9 +1,11 @@
 import aiohttp
 
 from src.config import settings 
+from src.utils.logger import log
 
 
 class HttpClient: 
+    @log
     async def get_breeds_from_api(self) -> list[str]: 
         async with aiohttp.ClientSession() as session: 
             async with session.get(settings.BREED_API_URL) as req: 
