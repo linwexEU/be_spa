@@ -46,3 +46,6 @@
     - Run the following command:
         - ```docker compose -f ./docker/docker-compose.yml up```
     - Go to: http://127.0.0.1:7777/docs
+
+**All API endpoints are documented in a Postman collection.**
+- Go to: **postman/SCA.postman_collection.json**
