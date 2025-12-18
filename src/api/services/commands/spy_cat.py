@@ -28,7 +28,6 @@ class CheckSpyCatExistCommand(Command):
 
     async def execute(self) -> bool: 
         spy_cat = await self.repo.select_one(self.spy_cat_id)
-        print(spy_cat)
         if spy_cat is None: 
             return False 
         return True
