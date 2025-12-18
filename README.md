@@ -1,0 +1,48 @@
+### **Backend Requirements:**
+
+- **Spy Cats**
+    - Ability to create a spy cat in the system
+        - A cat is described as Name, Years of Experience, Breed, and Salary.
+        - Breed must be validated, see General
+    - Ability to remove spy cats from the system
+    - Ability to update spy cats’ information (Salary)
+    - Ability to list spy cats
+    - Ability to get a single spy cat
+- **Missions / Targets**
+    - Ability to create a mission in the system along with targets in one single request
+        - A mission contains information about Cat, Targets and Complete state
+        - Each target is unique to a mission, so the endpoint should accept an object describing targets
+        - A target is described as Name, Country, Notes and Complete state
+    - Ability to delete a mission
+        - A mission cannot be deleted if it is already assigned to a cat
+    - Ability to update mission targets
+        - Ability to mark it as completed
+        - Ability to update Notes
+            - Notes cannot be updated if either the target or the mission is completed
+    - Ability to assign a cat to a mission
+    - Ability to list missions
+    - Ability to get a single mission
+- **General**
+    - Framework
+        - Use any of: FastAPI, Django
+    - Database
+        - You can use any database
+    - Validations
+        - Make sure endpoints validate the request body and return an adequate status code if it’s not valid
+        - Validate cat’s breed with [TheCatAPI](https://api.thecatapi.com/v1/breeds)
+- **Run Project Manually (PostgreSQL Required)**
+    - Create venv: 
+        - ```python -m venv venv```
+    - Activate venv: 
+        - ```source ./venv/bin/activate``` - linux
+        - ```.\venv\Scripts\activate.bat```
+    - Configure environment variables:
+        - Create and configure a .env file
+    - Install dependencies: 
+        - ```pip install -r req.txt```
+    - Run the backend service: 
+        - ```uvicorn src.main:app```
+- **Run project using Docker**
+    - Run the following command:
+        - ```docker compose -f ./docker/docker-compose.yml up```
+    - Go to: http://127.0.0.1:7777/docs
